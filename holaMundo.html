@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=800, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Hola ReactJS</title>
+</head>
+
+<body>
+    <main id="app"></main>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.4.1/react.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.4.1/react-dom.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.21.0/babel.min.js"></script>
+
+    <script type="text/javascript">
+        function Hola(props) {
+                  return React.DOM.h1({
+                id: 'titulo',
+            }, `Hola ${props.nombre}`);
+        }
+
+        const hola = React.createElement(Hola, {
+            nombre: 'Domingo',
+        });
+
+        ReactDOM.render(hola, document.getElementById('app'));
+    </script>
+
+
+</body>
+
+</html>
